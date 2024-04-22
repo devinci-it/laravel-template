@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root {
+    --font-family: 'Outfit', sans-serif;
+    --font-weight: 700;
+    --background-color: #f6f8fa;
+    --text-color: #23282e;
+    --border-color: rgb(208, 215, 222);
+    --border-radius: 4px;
+    --transition-duration: 0.3s;
+    --primary-hover-color: #e5e8eb;
+    --focus-outline-color: #0366d6;
+    --focus-box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
+    --error-border-color: #ff5252;
+    --error-bg-color: #ffeeee;
+    --alert-border-color: #ffca28;
+    --alert-bg-color: #fff9e7;
+    --success-border-color: #4caf50;
+    --success-bg-color: #e8f5e9;
+    --info-border-color: #0366D6;
+    --info-bg-color: #c8ddf5;
+
+    --button-padding: 8px 20px;
+    --button-font-size: 14px;
+    --button-font-weight: 600;
+    --button-line-height: 1.5;
+    --button-color: #fff;
+    --button-background-color: #f6f8fa;
+    --button-border: 1px solid transparent;
+    --button-cursor: pointer;
+    --button-transition: background-color var(--transition-duration) ease-in-out, color var(--transition-duration) ease-in-out;
+    --button-hover-background-color:rgb(208, 215, 222);
+    --button-outline: none;
+    --button-focus-outline: 0 0 0 3px var(--focus-outline-color);
+    --button-focus-box-shadow: var(--focus-box-shadow);
+
+
+
+    --line-height: 1.5;
+    --button-hover-background: #e5e8eb;
+}
+
+
+.error {
+    border-color: var(--error-border-color) !important;
+    color: var(--error-border-color) !important;
+    background-color: var(--error-bg-color) !important;
+}
+
+.alert{
+    border-color: var(--alert-border-color) !important;
+    color: var(--alert-border-color) !important;
+    background-color: var(--alert-bg-color) !important;
+}
+
+.success{
+    border-color: var(--success-border-color) !important;
+    color: var(--success-border-color) !important;
+    background-color: var(--sucess-bg-color); !important;
+}
+
+.info{
+    border-color: var(--info-border-color) !important;
+    color: var(--info-border-color) !important;
+    background-color: var(--info-bg-color)!important;
+}
+
+
+
+.btn, .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px;
+    font-size: 13px;
+    font-weight: var(--font-weight);
+    line-height: var(--line-height);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-duration) ease-in-out;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+
+
+
+
+.danger {
+    background-color: var(--error-bg-color);
+    border-color: var(--error-border-color);
+    color: var(--error-border-color);
+}
+
+.disabled {
+    background-color: #ddd;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.small {
+    font-size: 12px;
+}
+
+.large {
+    font-size: 16px;
+    padding: 10px 24px;
+}
+
+.block {
+    width: 100%;
+    display: block;
+    margin-top: 12px;
+}
+
+.hidden-text {
+    background-color: transparent;
+    color: var(--button-background-color);
+}
+
+.with-icon {
+    position: relative;
+}
+
+.icon-only {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.close-button {
+    background-color: transparent;
+    color: var(--button-background-color);
+}
+
+.with-count {
+    position: relative;
+    padding-right: 24px; /* Adjust as needed */
+}
+
+.count-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--button-background-color);
+    color: var(--button-color);
+    padding: 4px 8px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+/* Button Groups */
+.button-group {
+    display: flex;
+}
+
+.group-item {
+    /* Style for button group item */
+}
+
+.dark{
+    background-color: var(--text-color);
+    color:var(--border-color);
+}
+
+.primary{
+    color:var(--text-color);
+    background-color: var(--background-color);
+
+}
+
+.round{
+    border-radius: 35px;
+    border: solid 1.5px ;
+}
+
+.outline {
+    background-color: #fff;
+    color: var(--text-color);
+    border :solid 1.5px var(--text-color);
+}
+/* First button in the group */
+.button.group-item:first-of-type {
+    border-top: solid;
+    border-bottom: solid;
+    border-right: none;
+    border-left: solid; /* Add left border */
+    border-color: var(--border-color);
+    border-radius: 20px 0 0 20px;
+}
+
+/* Last button in the group */
+.button.group-item:last-of-type {
+    border-top: solid;
+    border-bottom: solid;
+    border-right: solid;
+    border-color: var(--border-color);
+    border-radius: 0 20px 20px 0;
+}
+
+/* Middle buttons in the group */
+.button.group-item:not(:first-of-type):not(:last-of-type) {
+    border: 1px solid var(--border-color); !important;
+border-radius: 0; !important;
+}
+
+.button-group .quad:first-child {
+    border-top-left-radius: 5px; !important;
+    border-bottom-left-radius: 5px; !important;
+}
+
+/* Last button in the group */
+.button-group .quad:last-child {
+    border-top-right-radius: 5px;!important;
+    border-bottom-right-radius: 5px; !important;
+}
+
+/* Middle buttons in the group */
+.button-group .quad:not(:first-child):not(:last-child) {
+    border-radius: 0;!important;
+}
+
+/* Additional styles for quad buttons */
+.button-group .quad {
+    margin-right: -1px; !important;
+    /* To avoid a small gap between buttons */
+}

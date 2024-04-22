@@ -1,0 +1,174 @@
+/**
+ * Typography Styles
+ * 
+ * This CSS document defines a consistent and modular typography system
+ * using Google Fonts for the 'Outfit' font family. It includes variables
+ * for font family, font weights, and specific styles for various text elements.
+ * Each style is defined with associated font sizes, line heights, font weights,
+ * and font families where applicable.
+ * 
+ * Typography Variables:
+ * - Font Family: 'Outfit', sans-serif
+ * - Font Weights: Light, Normal, Medium, Semibold
+ * - Display Height, Body Large, Code Block, Title Large, Title Medium, Title Small,
+ *   Subtitle, Body Medium, Body Small, Caption, Code Inline
+ * 
+ * Typography Classes:
+ * - display-text, body-large-text, code-block-text, title-large-text, title-medium-text,
+ *   title-small-text, subtitle-text, body-medium-text, body-small-text, caption-text,
+ *   code-inline-text
+ * 
+ * Usage:
+ * Apply the provided classes to HTML elements for consistent and easily adjustable typography.
+ * Customize font family and styles by modifying the defined variables.
+ * 
+ * Note: Ensure to include the font import statement in your HTML or CSS to use the 'Outfit' font.
+*
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    /* Font Family */
+    --base-font-family: 'Poppins', sans-serif;
+  
+    /* Font Weights */
+    --base-text-weight-light: 300;
+    --base-text-weight-normal: 400;
+    --base-text-weight-medium: 500;
+    --base-text-weight-semibold: 600;
+  
+    /* Display Height */
+    --text-display-lineBoxHeight: 3.5rem; 
+    --text-display-size: 2.5rem;
+    --text-display-lineHeight: 1.4;
+    --text-display-weight: var(--base-text-weight-medium);
+  
+    /* Body Large */
+    --text-body-size-large: 1rem; 
+    --text-body-lineHeight-large: 1.5;
+  
+    /* Code Block */
+    --text-codeBlock-size: 0.8125rem; 
+    --text-codeBlock-lineHeight: 1.5385;
+    --text-codeBlock-weight: var(--base-text-weight-normal);
+  
+    /* Title Large */
+    --text-title-large-size: 2.5rem; 
+    --text-title-large-lineHeight: 1.4;
+    --text-title-large-weight: var(--base-text-weight-medium);
+  
+    /* Title Medium */
+    --text-title-medium-size: 2rem; 
+    --text-title-medium-lineHeight: 1.5;
+    --text-title-medium-weight: var(--base-text-weight-medium);
+  
+    /* Title Small */
+    --text-title-small-size: 1.25rem; 
+    --text-title-small-lineHeight: 1.4;
+    --text-title-small-weight: var(--base-text-weight-semibold);
+  
+    /* Subtitle */
+    --text-subtitle-size: 1rem; 
+    --text-subtitle-lineHeight: var(--text-title-medium-lineHeight);
+    --text-subtitle-weight: var(--base-text-weight-normal);
+  
+    /* Body Medium */
+    --text-body-medium-size: 1rem; 
+    --text-body-medium-lineHeight: 1.5;
+    --text-body-medium-weight: var(--base-text-weight-normal);
+  
+    /* Body Small */
+    --text-body-small-size: 0.8125rem; 
+    --text-body-small-lineHeight: 20px;
+    --text-body-small-weight: var(--base-text-weight-normal);
+  
+    /* Caption */
+    --text-caption-size: 0.75rem; 
+    --text-caption-lineHeight: 16px;
+    --text-caption-weight: var(--base-text-weight-normal);
+  
+    /* Code Inline */
+    --text-codeInline-size: 1em;
+    --text-codeInline-lineHeight: inherit;
+    --text-codeInline-weight: var(--base-text-weight-normal);
+  }
+  
+  body{
+    font-family: var(--base-font-family)
+  }
+  /* Typography Classes */
+  .display-text {
+    font-size: var(--text-display-size);
+    line-height: var(--text-display-lineHeight);
+    font-weight: var(--text-display-weight);
+    font-family: var(--base-font-family);
+  }
+  
+  .body-large-text {
+    font-size: var(--text-body-size-large);
+    line-height: var(--text-body-lineHeight-large);
+    font-family: var(--base-font-family);
+  }
+  
+  .code-block-text {
+    font-size: var(--text-codeBlock-size);
+    line-height: var(--text-codeBlock-lineHeight);
+    font-weight: var(--text-codeBlock-weight);
+    font-family: var(--base-font-family);
+  }
+  
+  .title-large-text {
+    font-size: var(--text-title-large-size);
+    line-height: var(--text-title-large-lineHeight);
+    font-weight: var(--text-title-large-weight);
+    font-family: var(--base-font-family);
+  }
+  
+  .title-medium-text {
+    font-size: var(--text-title-medium-size);
+    line-height: var(--text-title-medium-lineHeight);
+    font-weight: var(--text-title-medium-weight);
+    font-family: var(--base-font-family);
+  }
+  
+  .title-small-text {
+    font-size: var(--text-title-small-size);
+    line-height: var(--text-title-small-lineHeight);
+    font-weight: var(--text-title-small-weight);
+    font-family: var(--base-font-family);
+  }
+  
+  .subtitle-text {
+    font-size: var(--text-subtitle-size);
+    line-height: var(--text-subtitle-lineHeight);
+    font-weight: var(--text-subtitle-weight);
+    font-family: var(--base-font-family);
+  }
+  
+  .body-medium-text {
+    font-size: var(--text-body-medium-size);
+    line-height: var(--text-body-medium-lineHeight);
+    font-weight: var(--text-body-medium-weight);
+    font-family: var(--base-font-family);
+  }
+  
+  .body-small-text {
+    font-size: var(--text-body-small-size);
+    line-height: var(--text-body-small-lineHeight);
+    font-weight: var(--text-body-small-weight);
+    font-family: var(--base-font-family);
+  }
+  
+  .caption-text {
+    font-size: var(--text-caption-size);
+    line-height: var(--text-caption-lineHeight);
+    font-weight: var(--text-caption-weight);
+    font-family: var(--base-font-family);
+  }
+  
+  .code-inline-text {
+    font-size: var(--text-codeInline-size);
+    line-height: var(--text-codeInline-lineHeight);
+    font-weight: var(--text-codeInline-weight);
+    font-family: var(--base-font-family);
+  }
