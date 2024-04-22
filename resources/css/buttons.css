@@ -41,7 +41,7 @@
 
 
 .error {
-    border-color: var(--error-border-color) !important;
+    border-color: var(--error-border-color)important;
     color: var(--error-border-color) !important;
     background-color: var(--error-bg-color) !important;
 }
@@ -55,7 +55,7 @@
 .success{
     border-color: var(--success-border-color) !important;
     color: var(--success-border-color) !important;
-    background-color: var(--sucess-bg-color); !important;
+    background-color: var(--sucess-bg-color)!important;
 }
 
 .info{
@@ -202,28 +202,28 @@
 
 /* Middle buttons in the group */
 .button.group-item:not(:first-of-type):not(:last-of-type) {
-    border: 1px solid var(--border-color); !important;
-border-radius: 0; !important;
+    border: 1px solid var(--border-color)!important;
+border-radius: 0!important;
 }
 
 .button-group .quad:first-child {
-    border-top-left-radius: 5px; !important;
-    border-bottom-left-radius: 5px; !important;
+    border-top-left-radius: 5px!important;
+    border-bottom-left-radius: 5px!important;
 }
 
 /* Last button in the group */
 .button-group .quad:last-child {
-    border-top-right-radius: 5px;!important;
-    border-bottom-right-radius: 5px; !important;
+    border-top-right-radius: 5px!important;
+    border-bottom-right-radius: 5px!important;
 }
 
 /* Middle buttons in the group */
 .button-group .quad:not(:first-child):not(:last-child) {
-    border-radius: 0;!important;
+    border-radius: 0!important;
 }
 
 /* Additional styles for quad buttons */
 .button-group .quad {
-    margin-right: -1px; !important;
+    margin-right: -1px!important;
     /* To avoid a small gap between buttons */
 }

@@ -7,9 +7,7 @@
 
     @if(app()->environment('local'))
         <!-- Vite's development server provides assets in development -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @else
+        @vite(['resources/css/app.css', 'resources/js/app.js'])   @else
         <!-- In production, the assets are resolved through Vite's manifest -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @endif
+        @vite('resources/js/app.js', 'vendor/courier/build')    @endif
 </head>
