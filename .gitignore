@@ -17,3 +17,13 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+#####################################################
+# The following files are ignored by default.       #
+# Remove the entries below if you want to include   #
+# them in your project.                             #
+#####################################################
+
+# Ignore composer.lock and package-lock.json files
+composer.lock
+package-lock.json
