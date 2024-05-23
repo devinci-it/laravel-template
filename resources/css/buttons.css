@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');*/
 :root {
-    --font-family: 'Outfit', sans-serif;
-    --font-weight: 700;
+    --font-family: 'HubotSans', sans-serif;
+    --font-weight: 500;
     --background-color: #f6f8fa;
     --text-color: #23282e;
     --border-color: rgb(208, 215, 222);
@@ -55,7 +55,7 @@
 .success{
     border-color: var(--success-border-color) !important;
     color: var(--success-border-color) !important;
-    background-color: var(--sucess-bg-color)!important;
+    background-color: var(--success-bg-color) !important;
 }
 
 .info{
@@ -86,7 +86,10 @@
 
 
 
-
+.dark{
+    background-color: var(--text-color);
+    color: #ccc;
+}
 
 .danger {
     background-color: var(--error-bg-color);
@@ -173,7 +176,7 @@
 
 .round{
     border-radius: 35px;
-    border: solid 1.5px ;
+    border: solid 1.5px var(--border-color) ;
 }
 
 .outline {

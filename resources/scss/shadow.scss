@@ -1,0 +1,23 @@
+// Define shadow sizes
+$shadow-sizes: (
+    xsmall: 0 1px 0 0,
+    small: 0 3px 6px 0,
+    medium: 0 6px 12px -3px,
+    large: 0 40px 80px 0,
+    xlarge: 0 56px 112px 0
+);
+
+// Generate shadow classes
+@each $size, $value in $shadow-sizes {
+    .shd-f-#{$size} {
+        box-shadow: 0 0 0 1px #d0d7de, #{$value} ,#424a530a, 0 6px 18px 0 #424a531f;
+    }
+
+    .shd-r-#{$size} {
+        box-shadow: #{$value} #1f23281a;
+    }
+
+    .shd-i-#{$size} {
+        box-shadow: inset #{$value} #1f23280a;
+    }
+};

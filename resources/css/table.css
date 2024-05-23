@@ -1,0 +1,148 @@
+.container {
+    display: flex;
+}
+
+.sidebar {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+}
+
+.category-list li {
+    margin-bottom: 5px;
+}
+
+.category-list a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.category-list a:hover {
+    background-color: #ddd;
+}
+
+.content {
+    flex: 4;
+    padding: 20px;
+}
+
+.card-container {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9; /* Light gray background color */
+}
+
+.card-header {
+    color: #333; /* Text color for card header */
+}
+
+.card-header h2 {
+    margin: 0;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 8px; /* Reduced padding for table cells */
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.table td {
+    background-color: #fff;
+}
+
+.btn-view-more {
+    padding: 5px 3px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-view-more:hover {
+    background-color: #0056b3;
+}
+
+/* Table Header */
+.table-header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.table-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.table-subtitle {
+    font-size: 1rem;
+    color: #666;
+}
+
+.table-actions {
+    margin-top: 10px;
+}
+
+.table-filter {
+    margin-top: 10px;
+}
+
+/* Column Headers */
+.column-header {
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Row Headers */
+.row-header {
+    font-weight: bold;
+    text-align: left;
+    padding: 8px 10px;
+}
+
+/* Pagination Footer */
+.pagination-footer {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.pagination-info {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.pagination-controls {
+    margin-top: 10px;
+}
+
+/* Additional styling can be added as needed */
+

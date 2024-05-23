@@ -1,0 +1,70 @@
+/**
+ * SCSS mixin for defining borders with customizable sides, width, and color,
+ * along with ready-to-use classes for common border styles.
+ */
+
+// Border variables
+$border-default-width: 1px;
+$border-default-color: #ccc;
+
+// Define customizable border sides
+$border-sides: (
+    top,
+    right,
+    bottom,
+    left,
+    horizontal,
+    vertical,
+    all
+);
+
+// Mixin for setting border style
+@mixin border($side, $width: $border-default-width, $color: $border-default-color) {
+    @if $side == "all" {
+        border: $width solid $color;
+    } @else if $side == "horizontal" {
+        border-top: $width solid $color;
+        border-bottom: $width solid $color;
+    } @else if $side == "vertical" {
+        border-right: $width solid $color;
+        border-left: $width solid $color;
+    } @else {
+        border-#{$side}: $width solid $color;
+    }
+}
+
+// Ready-to-use border classes with shorthand names
+
+.bt { @include border(top); }
+.br { @include border(right); }
+.bb { @include border(bottom); }
+.bl { @include border(left); }
+.bh { @include border(horizontal); }
+.bv { @include border(vertical); }
+.ba { @include border(all); }
+
+// Customized border classes for different border styles with shorthand names
+
+.bp { @include border(all, 2px, #007bff); }
+.bs { @include border(all, 1px, #6c757d); }
+.bg { @include border(all, 2px, #28a745); }
+.bd { @include border(all, 2px, #dc3545); }
+.bw { @include border(all, 2px, #ffc107); }
+.bi { @include border(all, 2px, #17a2b8); }
+
+// Custom border class for gray accent dark
+
+.bg-dark {
+    @include border(all, 1px, #343a40);
+}
+
+/*
+Sample usage:
+
+<div class="ba bp">Primary Border</div>
+<div class="bt bg">Top Border</div>
+<div class="br bd">Right Border</div>
+<div class="bb bw">Bottom Border</div>
+<div class="bl bi">Left Border</div>
+<div class="bg-dark">Gray Accent Dark Border</div>
+*/

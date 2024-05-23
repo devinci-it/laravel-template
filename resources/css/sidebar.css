@@ -1,0 +1,63 @@
+/* Add this to your existing CSS file or create a new one */
+
+.burger-menu-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.burger-menu-btn span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin-bottom: 6px;
+    transition: transform 0.3s ease;
+}
+
+.burger-menu-btn.active span:first-child {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.burger-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu-btn.active span:last-child {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.sidebar {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    bottom: 0;
+    width: 280px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.sidebar.show {
+    left: 0;
+    width: 100vw;
+}
+
+/* Blur effect */
+.main-layout.show-sidebar::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    z-index: 998;
+    backdrop-filter: blur(8px); /* Adjust the blur effect as needed */
+}
+

@@ -1,0 +1,51 @@
+/*
+   Padding Utility Classes
+
+   Padding utilities have many variations and will be used in many places. This SCSS
+   file provides a shorthand naming convention to help keep class names succinct.
+*/
+
+/* Base size for padding calculations */
+$base-padding-size: 4px;
+
+/* Ratio for padding values */
+$padding-ratio: 2;
+
+/* Generate padding utility classes */
+/*
+   This mixin generates padding utility classes according to the provided shorthand naming
+   convention. It creates classes for padding, top, right, bottom, left, horizontal, and
+   vertical padding with various values.
+*/
+@mixin generate-padding-utilities {
+    $padding-multiplier: 0;
+    @for $i from 0 through 12 {
+        .p#{$i} {
+            padding: $base-padding-size * $padding-multiplier;
+        }
+        .pt#{$i} {
+            padding-top: $base-padding-size * $padding-multiplier;
+        }
+        .pr#{$i} {
+            padding-right: $base-padding-size * $padding-multiplier;
+        }
+        .pb#{$i} {
+            padding-bottom: $base-padding-size * $padding-multiplier;
+        }
+        .pl#{$i} {
+            padding-left: $base-padding-size * $padding-multiplier;
+        }
+        .px#{$i} {
+            padding-left: $base-padding-size * $padding-multiplier;
+            padding-right: $base-padding-size * $padding-multiplier;
+        }
+        .py#{$i} {
+            padding-top: $base-padding-size * $padding-multiplier;
+            padding-bottom: $base-padding-size * $padding-multiplier;
+        }
+        $padding-multiplier: $padding-multiplier + $padding-ratio;
+    }
+}
+
+// Include the mixin to generate padding utility classes
+@include generate-padding-utilities;

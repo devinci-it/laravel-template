@@ -1,0 +1,161 @@
+/* Flex Utilities */
+
+// Display flex container
+.flex {
+  display: flex;
+}
+
+// Set flex direction to row
+.flex-row {
+  flex-direction: row;
+}
+
+// Set flex direction to column
+.flex-column {
+  flex-direction: column;
+}
+
+// Allow flex items to wrap to the next line
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+// Align items to the start of the flex container
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+// Center items within the flex container
+.justify-content-center {
+  justify-content: center;
+}
+
+// Align items to the end of the flex container
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+// Distribute items evenly along the main axis
+.justify-content-between {
+  justify-content: space-between;
+}
+
+// Distribute items evenly around the main axis
+.justify-content-around {
+  justify-content: space-around;
+}
+
+// Align items to the start of the cross axis
+.align-items-start {
+  align-items: flex-start;
+}
+
+// Center items along the cross axis
+.align-items-center {
+  align-items: center;
+}
+
+// Align items to the end of the cross axis
+.align-items-end {
+  align-items: flex-end;
+}
+
+// Align items such that their baselines align
+.align-items-baseline {
+  align-items: baseline;
+}
+
+// Stretch items to fill the container along the cross axis
+.align-items-stretch {
+  align-items: stretch;
+}
+
+/* Grid Utilities */
+
+// Display grid container
+.grid {
+  display: grid;
+}
+
+// Set grid template columns to create a 2-column layout
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+// Set grid template columns to create a 3-column layout
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+// Set grid template columns to create a 4-column layout
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+// Set grid template columns to create a 5-column layout
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+// Set grid template columns to create a 6-column layout
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+// Set grid template columns to automatically fit content
+.grid-cols-auto {
+  grid-template-columns: auto;
+}
+
+// Set gap between grid items
+.grid-gap-4 {
+  gap: 1rem;
+}
+
+/* Space Between Layout Utilities */
+
+// Add space between layout items
+.space-between-items {
+  justify-content: space-between;
+}
+
+// Add space around layout items
+.space-around-items {
+  justify-content: space-around;
+}
+
+/* Equal Height Children Utilities */
+
+// Make children have equal height within a flex container
+.equal-height-children {
+  display: flex;
+}
+
+.equal-height-children > * {
+  flex: 1;
+}
+
+/* Flex Grow Utilities */
+
+// Make the element grow to occupy remaining vertical space
+.flex-grow-v {
+  flex-grow: 1;
+}
+
+// Make the element grow to occupy remaining horizontal space
+.flex-grow-h {
+  flex-grow: 1;
+  min-width: 0; /* Ensure element can shrink to fit content if necessary */
+}
+
+
+main.full {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main.full > section {
+  flex: 1;
+}

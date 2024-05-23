@@ -27,3 +27,7 @@ yarn-error.log
 # Ignore composer.lock and package-lock.json files
 composer.lock
 package-lock.json
+*.map # Ignore all map files
+*.css.map # Ignore all map files
+resources/.DS_Store
+resources/._.DS_Store

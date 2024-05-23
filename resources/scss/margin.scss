@@ -1,0 +1,51 @@
+/*
+   Margin Utility Classes
+
+   Margin utilities have many variations and will be used in many places. This SCSS
+   file provides a shorthand naming convention to help keep class names succinct.
+*/
+
+/* Base size for margin calculations */
+$base-size: 4px;
+
+/* Ratio for margin values */
+$ratio: 2;
+
+/* Generate margin utility classes */
+/*
+   This mixin generates margin utility classes according to the provided shorthand naming
+   convention. It creates classes for margin, top, right, bottom, left, horizontal, and
+   vertical margins with various values.
+*/
+@mixin generate-margin-utilities {
+    $multiplier: 0;
+    @for $i from 0 through 12 {
+        .m#{$i} {
+            margin: $base-size * $multiplier;
+        }
+        .t#{$i} {
+            margin-top: $base-size * $multiplier;
+        }
+        .r#{$i} {
+            margin-right: $base-size * $multiplier;
+        }
+        .b#{$i} {
+            margin-bottom: $base-size * $multiplier;
+        }
+        .l#{$i} {
+            margin-left: $base-size * $multiplier;
+        }
+        .x#{$i} {
+            margin-left: $base-size * $multiplier;
+            margin-right: $base-size * $multiplier;
+        }
+        .y#{$i} {
+            margin-top: $base-size * $multiplier;
+            margin-bottom: $base-size * $multiplier;
+        }
+        $multiplier: $multiplier + $ratio;
+    }
+}
+
+// Include the mixin to generate margin utility classes
+@include generate-margin-utilities;
