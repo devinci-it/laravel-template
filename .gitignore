@@ -31,3 +31,5 @@ package-lock.json
 *.css.map # Ignore all map files
 resources/.DS_Store
 resources/._.DS_Store
+
+*~
