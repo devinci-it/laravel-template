@@ -1,0 +1,28 @@
+# Ignore git files
+.git
+.gitignore
+
+# Ignore node_modules directory (if you're using npm/yarn for frontend assets)
+node_modules
+
+# Ignore Docker specific files
+Dockerfile
+.dockerignore
+
+# Ignore development environment files
+.env
+
+# Ignore Composer vendor directory
+/vendor/
+
+# Ignore storage and cache directories
+/storage/
+/bootstrap/cache/
+
+# Ignore logs
+/logs/
+
+# Ignore any other sensitive or unnecessary files
+*.log
+*.sql
+*.sqlite
