@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+""" Script for setting up a development environment for a specified application. This script prompts the user for the 
+application name and generates: - Environment variables for application and database configuration. - An init.sql file to 
+initialize the database with the specified configuration. - Executes SQL commands to create the database and user. - Runs 
+database migrations, Composer (PHP dependencies), and npm (Node.js dependencies). Note: This script is intended for development 
+use only. Usage: - Execute the script and follow the prompts to set up the environment. Requirements: - Python 3.x - 
+MariaDB/MySQL installed and configured for database operations. - Composer and npm installed for PHP and Node.js dependency 
+management. """ import os import sys import subprocess def read_env():
+    """ Prompt user for application name and generate environment variables. Returns a dictionary of environment variables. """ 
+    app_name = input("Enter the Application Name: ").strip() db_name = f"{app_name}_db" db_user = f"{app_name}_user" db_password 
+    = "P@ssw0rd" # Default password print("\nConfiguration Summary:") print("======================") print(f"App Name: 
+    {app_name}") print(f"DB Name: {db_name}") print(f"DB User: {db_user}") print(f"DB Password: {db_password}") print("\nNote: 
+    This configuration is intended for development use.\n") confirmation = input("Are these values correct? (yes/no): 
+    ").strip().lower() if confirmation != "yes":
+        print("Exiting...") sys.exit(0)
+    # Return a dictionary of environment variables to be written to the new .env
+    return { "APP_NAME": app_name, "DB_NAME": db_name, "DB_USER": db_user, "DB_PASSWORD": db_password
+    }
+def write_env(env_vars): """ Write environment variables to a new .env file. """ with open(".env", "w") as env_file: for key, 
+        value in env_vars.items():
+            env_file.write(f"{key}={value}\n") def generate_init_sql(env_vars): """ Generate init.sql based on the provided DB 
+    configurations. """ with open("init.sql", "w") as sql_file:
+        sql_file.write(f"CREATE DATABASE IF NOT EXISTS `{env_vars['DB_NAME']}`;\n") sql_file.write(f"CREATE USER 
+        '{env_vars['DB_USER']}'@'localhost' IDENTIFIED BY '{env_vars['DB_PASSWORD']}';\n") sql_file.write(f"GRANT ALL PRIVILEGES 
+        ON `{env_vars['DB_NAME']}`.* TO '{env_vars['DB_USER']}'@'localhost';\n")
+def execute_sql_file(): """ Execute init.sql against MariaDB (assuming it's installed and configured). """ 
+    subprocess.run(["mysql", "-u", os.getenv("DB_USER"), "-p" + os.getenv("DB_PASSWORD"), "-h", "localhost", "-e", "source 
+    init.sql"])
+def run_migration(): """ Placeholder for running database migrations (e.g., Laravel migrations). """ print("Running database 
+    migrations...")
+    # Example: subprocess.run(["php", "artisan", "migrate"])
+def run_composer(): """ Run Composer install or update. """ print("Running Composer...") subprocess.run(["composer", "install"]) 
+    # Modify as needed for update
+def run_npm(): """ Run npm install or update. """ print("Running npm...") subprocess.run(["npm", "install"]) # Modify as needed 
+    for update
+def main(): try:
+        # Read environment variables from user input or existing .env file
+        env_vars = read_env()
+        # Write environment variables to new .env file
+        write_env(env_vars)
+        # Print a banner or summary of the configuration
+        print("\nStarting Application Setup...\n") print("=====================================") print(f"App Name: 
+        {env_vars['APP_NAME']}") print(f"Database: {env_vars['DB_NAME']}") print(f"User: {env_vars['DB_USER']}") 
+        print("=====================================\n")
+        # Generate init.sql based on DB config
+        generate_init_sql(env_vars)
+        # Execute SQL file against MariaDB
+        execute_sql_file()
+        # Run database migrations (if applicable)
+        run_migration()
+        # Run Composer install/update
+        run_composer()
+        # Run npm install/update
+        run_npm() print("Script execution completed.") except Exception as e: print(f"An error occurred: {str(e)}") sys.exit(1) 
+if __name__ == "__main__":
+    main()
